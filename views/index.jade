@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  ul
+    each message in messages
+      li
+        each value, key in message 
+          span= key + ": " + value + ' '
+
+  a(href='/new') New Message
